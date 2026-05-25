@@ -1,0 +1,13 @@
+    h1{
+      color: rgb(240, 141, 141);
+      background-color: brown;
+    }
+    p{
+      color: blueviolet;
+      background-color: antiquewhite;
+    }
+    img{
+      height: 300px;
+      width: 450px;
+
+    }
