@@ -16,3 +16,11 @@
       text-align: center;
       background-color: aqua;
     }
+    @keyframes moveRight {
+      from {
+        transform: translateX(0);
+      }
+      to{
+        transform: translateY(300px);
+      }
+    }
