@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-  .box {
+  div{
     width: 100px;
     height: 100px;
-    background-color: rgb(30, 7, 88);
-
-    animation-name: moveRight;
+    background-color: rgb(101, 13, 48);
+    position: relative;
+    animation-name: square;
     animation-duration: 5s;
-    animation-iteration-count: infinite;
+    animation-delay: 4s;
+    animation-iteration-count: 2;
   }
   @keyframes moveRight {
     0%{
@@ -28,6 +29,7 @@
   </style>
 </head>
 <body>
-<div class="box"></div>
+  <h1 class="title">CSS Animation</h1>
+<div></div>
 </body>
 </html>
