@@ -25,13 +25,32 @@
     color: red;
    }
    .card{
-    width: 400px;
+    width: 250px;
     padding: 60px;
     border: 1px solid rgb(205, 64, 64);
+    background-color: burlywood;
+    transition: 0.3s;
    }
    .card:hover{
     transform: scale(1.1);
    }
+
+   .box{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 6px;
+    border: 1px solid rgb(0, 0, 0);
+    overflow: auto;
+
+   }
+   .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+  
+   }
+
   </style>
 </head>
 
@@ -43,6 +62,22 @@
     <li>Item 3</li>
   </ul>
   <div class="card">card content</div>
+  <div class="box">
+  Lorem ipsum dolor sit amet... <br>
+  Lorem ipsum dolor sit amet... <br>
+  Lorem ipsum dolor sit amet... <br>
+  Lorem ipsum dolor sit amet... <br>
+  Lorem ipsum dolor sit amet... <br>
+
+  </div>
+  <div class="container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
 </body>
 
 </html>
