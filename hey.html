@@ -9,7 +9,7 @@
     button {
       background-color: tomato;
       color: rgb(0, 0, 0);
-      
+
       border-radius: 50%;
       margin: 25px;
       height: 200px;
@@ -21,36 +21,60 @@
       background-color: rgb(255, 226, 5);
 
     }
-   li:nth-child(2){
-    color: red;
-   }
-   .card{
-    width: 250px;
-    padding: 60px;
-    border: 1px solid rgb(205, 64, 64);
-    background-color: burlywood;
-    transition: 0.3s;
-   }
-   .card:hover{
-    transform: scale(1.1);
-   }
 
-   .box{
-    width: 150px;
-    height: 150px;
-    margin: 10px;
-    padding: 6px;
-    border: 1px solid rgb(0, 0, 0);
-    overflow: auto;
+    li:nth-child(2) {
+      color: red;
+    }
 
-   }
-   .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
-  
-   }
+    .card {
+      width: 250px;
+      padding: 60px;
+      border: 1px solid rgb(205, 64, 64);
+      background-color: burlywood;
+      transition: 0.3s;
+    }
 
+    .card:hover {
+      transform: scale(1.1);
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+      padding: 6px;
+      border: 1px solid rgb(0, 0, 0);
+      overflow: auto;
+
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 25px;
+
+    }
+
+.container{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;
+}
+
+.box{
+  background-color: lightblue;
+  padding:20px;
+  text-align:center;
+}
+
+/* Mobile Layout */
+@media (max-width:768px){
+
+  .container{
+    grid-template-columns:1fr;
+  }
+
+}
   </style>
 </head>
 
@@ -63,11 +87,11 @@
   </ul>
   <div class="card">card content</div>
   <div class="box">
-  Lorem ipsum dolor sit amet... <br>
-  Lorem ipsum dolor sit amet... <br>
-  Lorem ipsum dolor sit amet... <br>
-  Lorem ipsum dolor sit amet... <br>
-  Lorem ipsum dolor sit amet... <br>
+    Lorem ipsum dolor sit amet... <br>
+    Lorem ipsum dolor sit amet... <br>
+    Lorem ipsum dolor sit amet... <br>
+    Lorem ipsum dolor sit amet... <br>
+    Lorem ipsum dolor sit amet... <br>
 
   </div>
   <div class="container">
@@ -78,6 +102,14 @@
     <div>5</div>
     <div>6</div>
   </div>
+  <div class="container">
+    <div class="box"> box 1</div>
+    <div class="box"> box 2</div>
+    <div class="box"> box 3</div>
+    <div class="box"> box 4</div>
+    <div class="box"> box 5</div>
+    <div class="box"> box 6</div>
+  </div>
 </body>
 
-</html>
+</html> 
