@@ -1,366 +1,380 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sahiba</title>
+  <title>Sahiba</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    min-height:100vh;
-
-    background:
-    linear-gradient(
-        rgba(0,0,0,.45),
-        rgba(0,0,0,.45)
-    ),
-    url("rename.jpg");
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-}
-
-/* HEADING */
-
-h1{
-    text-align:center;
-    margin-top:50px;
-
-    color:white;
-
-    font-size:5rem;
-    letter-spacing:8px;
-
-    font-family:"Cormorant Garamond", serif;
-
-    animation:glow 3s infinite alternate;
-}
-
-@keyframes glow{
-
-    from{
-        text-shadow:0 0 10px rgba(255,255,255,.3);
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    to{
-        text-shadow:0 0 25px rgba(255,255,255,.8);
+    body {
+      min-height: 100vh;
+
+      background:
+        linear-gradient(rgba(0, 0, 0, .45),
+          rgba(0, 0, 0, .45)),
+        url("rename.jpg");
+
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
     }
-}
 
-.line{
-    width:120px;
-    height:2px;
+    /* HEADING */
 
-    background:#f8e8d0;
+    h1 {
+      text-align: center;
+      margin-top: 50px;
 
-    margin:15px auto 20px;
-}
+      color: white;
 
-.subtitle{
-    text-align:center;
+      font-size: 5rem;
+      letter-spacing: 8px;
 
-    color:#f8e8d0;
+      font-family: "Cormorant Garamond", serif;
 
-    font-style:italic;
+      animation: glow 3s infinite alternate;
+    }
 
-    letter-spacing:2px;
+    @keyframes glow {
 
-    margin-bottom:50px;
+      from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, .3);
+      }
 
-    font-family:"Cormorant Garamond", serif;
-}
+      to {
+        text-shadow: 0 0 25px rgba(255, 255, 255, .8);
+      }
+    }
 
-/* POEM CARD */
+    .line {
+      width: 120px;
+      height: 2px;
 
-.poem{
+      background: #f8e8d0;
 
-    width:70%;
+      margin: 15px auto 20px;
+    }
 
-    margin:0 auto 80px;
+    .subtitle {
+      text-align: center;
 
-    padding:60px;
+      color: #f8e8d0;
 
-    background:rgba(255,255,255,.05);
+      font-style: italic;
 
-    backdrop-filter:blur(12px);
+      letter-spacing: 2px;
 
-    border-radius:30px;
+      margin-bottom: 50px;
 
-    border:1px solid rgba(255,255,255,.12);
+      font-family: "Cormorant Garamond", serif;
+    }
 
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    /* POEM CARD */
 
-    color:#f8e8d0;
+    .poem {
 
-    font-family:"Cormorant Garamond", serif;
-}
+      width: 70%;
+
+      margin: 0 auto 80px;
+
+      padding: 60px;
+
+      background: rgba(255, 255, 255, .05);
+
+      backdrop-filter: blur(12px);
+
+      border-radius: 30px;
+
+      border: 1px solid rgba(255, 255, 255, .12);
+
+      box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
+
+      color: lavender;
+
+      font-family: "Noto Serif Devanagari", serif;
+    }
 
 
-/* AUDIO */
+    /* AUDIO */
 
-.player{
-    text-align:center;
+    .player {
+      text-align: center;
 
-    margin-bottom:50px;
-}
+      margin-bottom: 50px;
+    }
 
-.now-playing{
+    .now-playing {
 
-    font-size:1.5rem;
+      font-size: 18px;
 
-    letter-spacing:2px;
+      letter-spacing: 2px;
 
-    margin-bottom:15px;
-}
+      margin-bottom: 15px;
+    }
 
-.player audio{
+    .player audio {
 
-    width:70%;
+      width: 70%;
 
-    max-width:500px;
-}
+      max-width: 500px;
+    }
 
-/* LYRICS */
+    /* LYRICS */
 
-.stanza{
-    text-align:center;
-    font-size:1.6rem;
-    line-height:2.3;
-    margin-bottom:55px;
+    .stanza {
+      text-align: center;
+      font-size: 1.6rem;
+      line-height: 2.3;
+      margin-bottom: 55px;
 
-    transition:
+      transition:
         transform .4s ease,
         text-shadow .4s ease,
         color .4s ease;
-}
-
-.stanza:hover{
-    transform:scale(1.02);
-
-    color:white;
-
-    text-shadow:
-        0 0 10px rgba(255,255,255,.5),
-        0 0 20px rgba(248,232,208,.3);
-}
-.divider{
-
-    text-align:center;
-
-    font-size:28px;
-
-    color:rgba(248,232,208,.8);
-
-    margin:50px 0;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    h1{
-        font-size:3rem;
     }
 
- .poem{
-    width:70%;
-    margin:0 auto 80px;
-    padding:60px;
+    .stanza:hover {
+      transform: scale(1.02);
 
-    background:rgba(255,255,255,.05);
+      color: white;
 
-    backdrop-filter:blur(12px);
-
-    border-radius:30px;
-
-    border:1px solid rgba(255,255,255,.12);
-
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
-
-    color:#f8e8d0;
-
-    font-family:"Cormorant Garamond", serif;
-    transition:all .5s ease;
-}
-.poem:hover{
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.35),
-        0 0 30px rgba(255,255,255,.08);
-}
-
-    .stanza{
-        font-size:1.2rem;
+      text-shadow:
+        0 0 10px rgba(255, 255, 255, .5),
+        0 0 20px rgba(248, 232, 208, .3);
     }
 
-    .player audio{
-        width:100%;
+    .divider {
+
+      text-align: center;
+
+      font-size: 28px;
+
+      color: rgba(248, 232, 208, .8);
+
+      margin: 50px 0;
     }
-}
-.end-line{
-    width:180px;
-    height:1px;
 
-    margin:60px auto 25px;
+    /* MOBILE */
 
-    background:linear-gradient(
-        to right,
-        transparent,
-        rgba(248,232,208,.8),
-        transparent
-    );
-}
+    @media(max-width:768px) {
 
-.ending{
-    text-align:center;
+      h1 {
+        font-size: 3rem;
+      }
 
-    color:rgba(248,232,208,.8);
+      .poem {
+        width: 70%;
+        margin: 0 auto 80px;
+        padding: 60px;
 
-    font-style:italic;
+        background: rgba(255, 255, 255, .05);
 
-    font-size:1.2rem;
+        backdrop-filter: blur(12px);
 
-    letter-spacing:1px;
+        border-radius: 30px;
 
-    margin-bottom:20px;
-}
+        border: 1px solid rgba(255, 255, 255, .12);
 
-</style>
+        box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
+
+        color: #f8e8d0;
+
+        font-family: "Cormorant Garamond", serif;
+        transition: all .5s ease;
+      }
+
+      .poem:hover {
+        box-shadow:
+          0 20px 50px rgba(0, 0, 0, .35),
+          0 0 30px rgba(255, 255, 255, .08);
+      }
+
+      .stanza {
+        font-size: 1.2rem;
+      }
+
+      .player audio {
+        width: 100%;
+      }
+    }
+
+    .end-line {
+      width: 180px;
+      height: 1px;
+
+      margin: 60px auto 25px;
+
+      background: linear-gradient(to right,
+          transparent,
+          rgba(248, 232, 208, .8),
+          transparent);
+    }
+
+    .ending {
+      text-align: center;
+
+      color: rgba(248, 232, 208, .8);
+
+      font-style: italic;
+
+      font-size: 1.2rem;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>Sahiba</h1>
+  <h1>Sahiba</h1>
 
-<div class="line"></div>
+  <div class="line"></div>
 
-<p class="subtitle">
+  <p class="subtitle">
     A melody wrapped in memories
-</p>
+  </p>
 
-<div class="poem">
+  <div class="poem">
 
     <div class="player">
 
-        <div class="now-playing">
-            ♫ Now Playing
-        </div>
+      <div class="now-playing">
+        ♫ Now Playing
+      </div>
 
-        <audio controls>
-            <source src="sahiba.mp3" type="audio/mpeg">
-        </audio>
+      <audio controls>
+        <source src="sahiba.mp3" type="audio/mpeg">
+      </audio>
 
     </div>
-
     <div class="divider">❦ ❦ ❦</div>
 
     <div class="stanza">
-        ♪ Sahiba, aaye ghar kaahe na<br>
-        Aise toh sataye na,<br>
-        Dekhu tujhko chain aata hai..
+      ♪ साहिबा, आए घर काहे ना?<br>
+      ऐसे तो सताए ना<br>
+      देखूँ तुझको, चैन आता है
     </div>
 
     <div class="stanza">
-        Sahiba neendein veendein aaye na,<br>
-        Raatein kaati jaye na,<br>
-        Tera hi khayal din raen aata hai..
+      साहिबा, नींदें-वींदें आएँ ना<br>
+      रातें काटी जाएँ ना<br>
+      तेरा ही ख़याल दिन-रैन आता है
     </div>
 
     <div class="divider">✦ ✦ ✦</div>
 
     <div class="stanza">
-        Sahiba samandar,<br>
-        meri aankhon mein reh gye,<br>
-        Hum aate aate jaana,<br>
-        teri yaadon mein reh gye.
+      साहिबा, समुंदर मेरी आँखों में रह गए<br>
+      हम आते-आते, जानाँ,<br>
+      तेरी यादों में रह गए
     </div>
 
     <div class="stanza">
-        Yeh palkein gawahi hai,<br>
-        hum raaton mein reh gye,<br>
-        Jo vaade kiye saare,<br>
-        bas baaton mein reh gyee..
+      ये पलकें गवाही हैं<br>
+      हम रातों में रह गए<br>
+      जो वादे किए सारे<br>
+      बस बातों में रह गए
     </div>
 
     <div class="stanza">
-        Baaton baaton mein hi<br>
-        Khaabon khaabon mein hi<br>
-        Mere kareeb hai tu.<br>
-        Teri talab mujhko teri talab Jaana<br>
-        ho tu kabhi rubru…
+      बातों-बातों में ही<br>
+      ख़्वाबों-ख़्वाबों में ही<br>
+      मेरे क़रीब है तू
+    </div>
+
+    <div class="stanza">
+      तेरी तलब मुझको<br>
+      तेरी तलब, जानाँ<br>
+      हो तू कभी रू-ब-रू
     </div>
 
     <div class="divider">❦ ❦ ❦</div>
 
     <div class="stanza">
-        Shor sharaba jo seene mein hai<br>
-        Mere kaise byaan main karun<br>
-        Haal jo mera hai main<br>
-        kisko bataun, mere sahiba
+      शोर-शराबा जो सीने में है मेरे<br>
+      कैसे बयाँ मैं करूँ?<br>
+      हाल जो मेरा है<br>
+      मैं किस को बताऊँ?
     </div>
 
     <div class="stanza">
-        Dil na kiraye ka,<br>
-        thoda toh sambhalo na,<br>
-        Naazuk hai yeh toot jata hai..
+      मेरे साहिबा<br>
+      दिल ना किराए का<br>
+      थोड़ा तो सँभालो ना<br>
+      नाज़ुक है ये, टूट जाता है
     </div>
-      <div class="stanza">
-        Sahiba neendein veendein aaye na,<br>
-        Raatein kaati jaye na,<br>
-        Tera hi khayal din raen aata hai..
+
+    <div class="stanza">
+      साहिबा, नींदें-वींदें आएँ ना<br>
+      रातें काटी जाएँ ना<br>
+      तेरा ही ख़याल दिन-रैन आता है
     </div>
 
     <div class="divider">✦ ✦ ✦</div>
 
     <div class="stanza">
-        Kaisi bhala, shab hogi woh,<br>
-        Sang jo tere, dhalti hai.<br>
-        Dil ko koi, khaahish nahi,<br>
-        Teri kami khalti hai..
+      कैसी भला शब होगी वो<br>
+      संग जो तेरे ढलती है?
     </div>
 
     <div class="stanza">
-        Aaram na, abb aakhon ko<br>
-        Khaab bhi na badalti hai..<br>
-        Dil ko koi, khaahish nahi,<br>
-        Teri kami jana khalti hai..
+      दिल को कोई ख़्वाहिश नहीं<br>
+      तेरी कमी खलती है
     </div>
 
     <div class="stanza">
-        Sahiba, tu hi mera aayina,<br>
-        Hathon mein bhi mere haan,<br>
-        Tera hi naseeb aata hai.
+      आराम ना अब आँखों को<br>
+      ख़्वाब भी ना बदलती है<br>
+      दिल को कोई ख़्वाहिश नहीं<br>
+      तेरी कमी, जानाँ, खलती है
+    </div>
+
+    <div class="divider">❦ ❦ ❦</div>
+
+    <div class="stanza">
+      साहिबा, तू ही मेरा आईना<br>
+      हाथों में भी मेरे, हाँ<br>
+      तेरा ही नसीब आता है
+    </div>
+
+    <div class="stanza">
+      साहिबा, नींदें-वींदें आएँ ना<br>
+      रातें काटी जाएँ ना<br>
+      तेरा ही ख़याल दिन-रैन आता है
     </div>
 
     <div class="divider">♪ ♫ ♪</div>
 
     <div class="stanza">
-        Sahiba neendein veendein aaye na<br>
-        Raatein kaati jaye na,<br>
-        Tera hi khayal din raen aata hai..
-      
+      साहिबा, नींदें-वींदें आएँ ना<br>
+      रातें काटी जाएँ ना<br>
+      तेरा ही ख़याल दिन-रैन आता है
     </div>
-
-</div>
-<div class="end-line"></div>
+    ```
 
 
+  </div>
+  <div class="end-line"></div>
 
-<p class="ending">
+  <p class="ending">
     ✦ Sahiba ✦<br>
     "Tera hi khayal din rain aata hai..."
-</p>
+  </p>
 </body>
+
 </html>
 ```
