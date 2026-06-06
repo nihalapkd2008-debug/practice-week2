@@ -1,40 +1,333 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body{
-      background-image:url("/rename.jpg");
-      background-repeat: no-repeat;
-      background-size: cover 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sahiba</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+    ),
+    url("rename.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+/* HEADING */
+
+h1{
+    text-align:center;
+    margin-top:50px;
+
+    color:white;
+
+    font-size:5rem;
+    letter-spacing:8px;
+
+    font-family:"Cormorant Garamond", serif;
+
+    animation:glow 3s infinite alternate;
+}
+
+@keyframes glow{
+
+    from{
+        text-shadow:0 0 10px rgba(255,255,255,.3);
     }
+
+    to{
+        text-shadow:0 0 25px rgba(255,255,255,.8);
+    }
+}
+
+.line{
+    width:120px;
+    height:2px;
+
+    background:#f8e8d0;
+
+    margin:15px auto 20px;
+}
+
+.subtitle{
+    text-align:center;
+
+    color:#f8e8d0;
+
+    font-style:italic;
+
+    letter-spacing:2px;
+
+    margin-bottom:50px;
+
+    font-family:"Cormorant Garamond", serif;
+}
+
+/* POEM CARD */
+
+.poem{
+
+    width:70%;
+
+    margin:0 auto 80px;
+
+    padding:60px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    color:#f8e8d0;
+
+    font-family:"Cormorant Garamond", serif;
+}
+
+
+/* AUDIO */
+
+.player{
+    text-align:center;
+
+    margin-bottom:50px;
+}
+
+.now-playing{
+
+    font-size:1.5rem;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+}
+
+.player audio{
+
+    width:70%;
+
+    max-width:500px;
+}
+
+/* LYRICS */
+
+.stanza{
+    text-align:center;
+    font-size:1.6rem;
+    line-height:2.3;
+    margin-bottom:55px;
+
+    transition:all .4s ease;
+}
+
+.stanza:hover{
+    color:white;
+    text-shadow:
+    0 0 15px rgba(255,255,255,.6);
+}
+.divider{
+
+    text-align:center;
+
+    font-size:28px;
+
+    color:rgba(248,232,208,.8);
+
+    margin:50px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
     h1{
-      margin: 100px;
-      color: white;
-      text-align: center;
-      font-family: cursive;
+        font-size:3rem;
     }
-    p{
-      text-align: left;
-      color: rgb(244, 198, 137);
+
+    .poem{
+        width:90%;
+        padding:30px;
     }
-  </style>
+
+    .stanza{
+        font-size:1.2rem;
+    }
+
+    .player audio{
+        width:100%;
+    }
+}
+.end-line{
+    width:180px;
+    height:1px;
+
+    margin:60px auto 25px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(248,232,208,.8),
+        transparent
+    );
+}
+
+.ending{
+    text-align:center;
+
+    color:rgba(248,232,208,.8);
+
+    font-style:italic;
+
+    font-size:1.2rem;
+
+    letter-spacing:1px;
+
+    margin-bottom:20px;
+}
+
+</style>
 </head>
+
 <body>
-  <h1> SAHIBA</h1>
-  <p>>
-   
-Sahiba, aaye ghar kaahe na?<br>
-Aise toh sataye na Dekhun tujhko, <br>chain aata hai Sahiba,<br> neendein-veendein aayein na <br> Raatein kaati jaayein na <br>Tera hi khayaal din-rain aata hai Sahiba, <br> samundar meri aankhon <br> mein reh gaye Hum aate-aate,<br> jaana, teri yaadon mein reh gaye <br> Yeh palkein gawaahi hain, <br>
 
+<h1>Sahiba</h1>
 
+<div class="line"></div>
 
-  </p>
-  <p>
-     hum raaton mein reh gaye <br>Jo waade kiye saare bas <br>baaton mein reh gaye Baaton- <br>baaton mein hi, khwabon- <br>khwabon mein hi <br> Mere qareeb hai tu <br>Teri talab mujhko,<br> teri talab, jaana Ho <br>tu kabhi roo-ba-roo
-<br>Shor-sharaba jo seene <br> mein hai mere <br>
-  </p>
+<p class="subtitle">
+    A melody wrapped in memories
+</p>
+
+<div class="poem">
+
+    <div class="player">
+
+        <div class="now-playing">
+            ♫ Now Playing
+        </div>
+
+        <audio controls>
+            <source src="sahiba.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+    <div class="divider">❦ ❦ ❦</div>
+
+    <div class="stanza">
+        ♪ Sahiba, aaye ghar kaahe na<br>
+        Aise toh sataye na,<br>
+        Dekhu tujhko chain aata hai..
+    </div>
+
+    <div class="stanza">
+        Sahiba neendein veendein aaye na,<br>
+        Raatein kaati jaye na,<br>
+        Tera hi khayal din raen aata hai..
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <div class="stanza">
+        Sahiba samandar,<br>
+        meri aankhon mein reh gye,<br>
+        Hum aate aate jaana,<br>
+        teri yaadon mein reh gye.
+    </div>
+
+    <div class="stanza">
+        Yeh palkein gawahi hai,<br>
+        hum raaton mein reh gye,<br>
+        Jo vaade kiye saare,<br>
+        bas baaton mein reh gyee..
+    </div>
+
+    <div class="stanza">
+        Baaton baaton mein hi<br>
+        Khaabon khaabon mein hi<br>
+        Mere kareeb hai tu.<br>
+        Teri talab mujhko teri talab Jaana<br>
+        ho tu kabhi rubru…
+    </div>
+
+    <div class="divider">❦ ❦ ❦</div>
+
+    <div class="stanza">
+        Shor sharaba jo seene mein hai<br>
+        Mere kaise byaan main karun<br>
+        Haal jo mera hai main<br>
+        kisko bataun, mere sahiba
+    </div>
+
+    <div class="stanza">
+        Dil na kiraye ka,<br>
+        thoda toh sambhalo na,<br>
+        Naazuk hai yeh toot jata hai..
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <div class="stanza">
+        Kaisi bhala, shab hogi woh,<br>
+        Sang jo tere, dhalti hai.<br>
+        Dil ko koi, khaahish nahi,<br>
+        Teri kami khalti hai..
+    </div>
+
+    <div class="stanza">
+        Aaram na, abb aakhon ko<br>
+        Khaab bhi na badalti hai..<br>
+        Dil ko koi, khaahish nahi,<br>
+        Teri kami jana khalti hai..
+    </div>
+
+    <div class="stanza">
+        Sahiba, tu hi mera aayina,<br>
+        Hathon mein bhi mere haan,<br>
+        Tera hi naseeb aata hai.
+    </div>
+
+    <div class="divider">♪ ♫ ♪</div>
+
+    <div class="stanza">
+        Sahiba neendein veendein aaye na<br>
+        Raatein kaati jaye na,<br>
+        Tera hi khayal din raen aata hai..
+      
+    </div>
+
+</div>
+<div class="end-line"></div>
+
+<div class="end-line"></div>
+
+<p class="ending">
+    ✦ Sahiba ✦<br>
+    "Tera hi khayal din rain aata hai..."
+</p>
 </body>
 </html>
+```
